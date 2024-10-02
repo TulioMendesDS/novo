@@ -1,0 +1,10 @@
+services:
+  db:
+    image: mysql
+    container_name: api-database
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+      MYSQL_DATABASE: PessoaDatabase
+    ports:
+      - 3306:3306
